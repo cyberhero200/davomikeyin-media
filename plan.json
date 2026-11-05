@@ -1,0 +1,25 @@
+{
+ "flow_id": "lYMEso5UnF8zfRxSTVlg",
+ "lines": [
+  {
+   "file": "s1_hook.mp3",
+   "voice": "rwtcHtZgYU6HN2zLNBlf",
+   "prompt": "[whispers] To'qqizinchi qavatdasan. Deraza ortida esa... kimdir senga qarab turibdi."
+  },
+  {
+   "file": "s1_n1.mp3",
+   "voice": "rwtcHtZgYU6HN2zLNBlf",
+   "prompt": "[tense] Tasavvur qil: tungi soat ikki-yu qirq besh. Yotoqxonada yolg'izsan. [pause] Bir soat oldin stolingda hech narsa yo'q edi. Hozir esa... qora papka turibdi. [pause] Ochding. Ichida bitta surat. [pause] Suratda — sen. Xuddi shu stolda, papkani ochib o'tiribsan. [pause] [nervous] Deraza ortida esa bir soya turibdi. Bu xona... to'qqizinchi qavatda. [pause] Papkada ikki qoida bor. O'z ovozingni eshitsang, javob berma. Soat uchgacha bu xonada ikki kishi bo'lishi shart. [long pause] [whispers] Koridordan kimdir chaqiryapti... [pause] [nervous] Bu — sening ovozing. [pause] Suratga qarading. Soya endi derazaga tegib turibdi. [pause] Suratni ag'darding. Orqasida, o'z qo'ling bilan yozilgan: \"Bu safar boshqasini tanla.\" [long pause] [slowly] Eshikni ochasanmi... yoki derazani?"
+  },
+  {
+   "file": "s1_ovoz.mp3",
+   "voice": "CBeZJ4EnTnrJmhtlMCNC",
+   "prompt": "[whispers] [trembling voice] Ey... eshikni och. Muzlab qolyapman."
+  },
+  {
+   "file": "s2_n.mp3",
+   "voice": "rwtcHtZgYU6HN2zLNBlf",
+   "prompt": "[whispers] Sen bu kechani... sakkiz yuz qirq yetti marta yashagansan. [pause] [tense] Eshikni ochganlar: koridor bo'm-bo'sh edi. [pause] Lekin polda ho'l izlar paydo bo'ldi. Ular xonangga kirib... orqangda to'xtadi. [pause] Derazani ochganlar: tashqarida hech kim yo'q edi. [pause] [nervous] Tokchada ikkinchi surat turardi. Suratda sen uxlab yotibsan. Surat xonangning ichidan olingan. [pause] [slowly] Ikkala yo'l ham bir joyga olib keldi. Soat uch bo'ldi. [pause] Papka o'zi ochildi. Xona: to'qqiz yuz o'n to'rt. Urinish: sakkiz yuz qirq yetti. Oldingi natija: yo'qolgan. [long pause] Shu payt telefoning jiringladi. [pause] [nervous] Qo'ng'iroq... o'z raqamingdan. [pause] Birinchi qoida: o'z ovozingni eshitsang, javob berma. Lekin papkaning oxirgi sahifasida bitta so'z bor: ochma. [long pause] [slowly] Telefonga javob berasanmi... yoki oxirgi sahifani ochasanmi?"
+  }
+ ]
+}
