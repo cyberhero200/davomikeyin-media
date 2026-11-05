@@ -10,6 +10,6 @@ for k in sorted(parts, key=int):
     a, b = parts[k]
     out = f'{prefix}_{k}-qism.mp4'
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{a:.3f}', '-to', f'{b + 0.35:.3f}', '-i', full,
-                    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p',
+                    '-c:v', 'libx264', '-preset', 'medium', '-vf', 'hqdn3d=2:1:3:3', '-crf', '25', '-maxrate', '9M', '-bufsize', '18M', '-pix_fmt', 'yuv420p',
                     '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out], check=True)
     print('wrote', out)

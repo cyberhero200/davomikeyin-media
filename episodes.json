@@ -215,7 +215,8 @@
 "SOYA: 845"
 ],
 "boom": 1,
-"vo": "[nervous] Koridordagi ovoz sakkiz yuz qirq oltinchi. Soya sakkiz yuz qirq beshinchi. Ikkalasi ham sen edi."
+"vo": "[nervous] Koridordagi ovoz sakkiz yuz qirq oltinchi. Soya sakkiz yuz qirq beshinchi. Ikkalasi ham sen edi.",
+"plate": "mirror"
 },
 {
 "t": "paper",
@@ -286,7 +287,7 @@
 "XARITADA YO‘Q"
 ],
 "size": 120,
-"bg": "stairs",
+"bg": "corridor",
 "cols": [
 "#FFFFFF",
 "#FF4A3D"
@@ -342,7 +343,7 @@
 "vo": "Devordagi chizmada bino sakkiz qavatli. To'qqizinchi qavat esa qo'lda chizilgan."
 },
 {
-"t": "door",
+"t": "lobby",
 "feet": 0,
 "vo": "Ko'cha eshigi ochiq turibdi. Stol ustida esa bitta o'chirg'ich."
 },
@@ -360,8 +361,7 @@
 ]
 },
 "r": {
-"t": "door",
-"feet": 0
+"t": "lobby"
 },
 "ll": "O‘CHIRISH",
 "rl": "KO‘CHA",
@@ -390,7 +390,7 @@
 "ENDI SENI",
 "HECH KIM TANIMAYDI"
 ],
-"size": 100,
+"size": 92,
 "bg": "crowd",
 "cols": [
 "#FFFFFF",
@@ -411,7 +411,7 @@
 "vo": "Ko'chaga chiqqanlar: tuman ichida yigirma qadam yurding."
 },
 {
-"t": "corridor",
+"t": "lobby",
 "num": "1",
 "boom": 1,
 "vo": "[nervous] Yigirma birinchi qadamda... yana shu qabulxonaga kirding."
@@ -433,9 +433,10 @@
 "vo": "[slowly] Ikkala yo'l ham liftga olib keldi. Unda yangi tugma bor: minus bir."
 },
 {
-"t": "room",
+"t": "lobby",
 "chair": 1,
-"vo": "Stolda navbatchi o'tiribdi. Orqasi senga qaragan. U hali bir marta ham qimirlamadi."
+"vo": "Stolda navbatchi o'tiribdi. Orqasi senga qaragan. U hali bir marta ham qimirlamadi.",
+"guard": 1
 },
 {
 "t": "split",
@@ -446,7 +447,8 @@
 ]
 },
 "r": {
-"t": "room"
+"t": "lobby",
+"guard": 1
 },
 "ll": "MINUS BIR",
 "rl": "NAVBATCHI",
@@ -476,7 +478,7 @@
 "YUZI YO‘Q"
 ],
 "size": 112,
-"bg": "room",
+"bg": "guard",
 "cols": [
 "#FFFFFF",
 "#FF4A3D"
@@ -492,7 +494,7 @@
 "vo": "[tense] Tugmani bosganlar: lift qirq yetti soniya pastga tushdi, keyin ochilmadi."
 },
 {
-"t": "paper",
+"t": "guard",
 "title": "NISHON",
 "rows": [
 [
@@ -507,7 +509,9 @@
 ]
 ],
 "tag": "B: O‘GIRGANLAR",
-"vo": "O'girganlar: ko'ksidagi nishonda bitta raqam bor edi. Nol, nol, bir."
+"vo": "O'girganlar: ko'ksidagi nishonda bitta raqam bor edi. Nol, nol, bir.",
+"badge": 1,
+"label": "NISHON: 001"
 },
 {
 "t": "big",
@@ -516,7 +520,8 @@
 "SEN EDING"
 ],
 "boom": 1,
-"vo": "[nervous] Birinchi urinish. Uni ham sen boshlagansan."
+"vo": "[nervous] Birinchi urinish. Uni ham sen boshlagansan.",
+"plate": "guard"
 },
 {
 "t": "monitor",
@@ -597,7 +602,7 @@
 "QO‘YILGAN"
 ],
 "size": 112,
-"bg": "paper",
+"bg": "folder",
 "title": "RUXSATNOMA",
 "rows": [],
 "cols": [
@@ -606,7 +611,8 @@
 "#FF4A3D"
 ],
 "y": 640,
-"vo": "[whispers] Qog'ozga qarading. Imzong oldindan qo'yilgan edi."
+"vo": "[whispers] Qog'ozga qarading. Imzong oldindan qo'yilgan edi.",
+"name": "847"
 },
 {
 "t": "paper",
@@ -742,7 +748,8 @@
 "#FFFFFF",
 "#FFD54A"
 ],
-"vo": "[slowly] Har bir xona bitta papka. Sen hech qachon binoda bo'lmagansan."
+"vo": "[slowly] Har bir xona bitta papka. Sen hech qachon binoda bo'lmagansan.",
+"plate": "archive"
 },
 {
 "t": "folder",

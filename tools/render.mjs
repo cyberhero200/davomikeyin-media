@@ -36,7 +36,7 @@ await b.close(); srv.close();
 const audio = path.join(root, 'audio', 'mix.wav');
 const args = ['-v', 'error', '-y', '-framerate', String(fps), '-i', path.join(tmp, '%05d.jpg')];
 if (fs.existsSync(audio)) args.push('-i', audio);
-args.push('-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', '-movflags', '+faststart');
+args.push('-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-maxrate', '20M', '-bufsize', '40M', '-movflags', '+faststart');
 if (fs.existsSync(audio)) args.push('-c:a', 'aac', '-b:a', '192k', '-shortest');
 args.push(out);
 execFileSync('ffmpeg', args, { stdio: 'inherit' });

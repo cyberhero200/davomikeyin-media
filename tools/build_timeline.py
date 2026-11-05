@@ -79,12 +79,19 @@ def split_phrases(x, texts):
 
 
 def words_for(text, env):
-    words = text.split(); voiced = env > 0.1
+    """Word timings: spread voiced time by syllables, then snap each word edge to the nearest energy dip."""
+    words = text.split(); voiced = env > 0.08
     vt = np.cumsum(voiced) / HZ; total = vt[-1] if len(vt) else len(env) / HZ
-    w = np.array([len(re.sub(r'[^\w‘]', '', s)) + 1.2 + (2.2 if re.search(r'[.!?…:]$', s) else 1.0 if s.endswith((',', '—')) else 0) for s in words])
+    def syl(s):
+        v = len(re.findall(r'[aeiouAEIOU]', s)); return max(1, v)
+    w = np.array([syl(s) * 3.0 + 0.8 + (2.0 if re.search(r'[.!?…:]$', s) else 0.9 if s.endswith((',', '—')) else 0) for s in words])
     cum = np.concatenate([[0], np.cumsum(w)]) / w.sum() * total
-    def v2t(v): return min(int(np.searchsorted(vt, v)), len(vt) - 1) / HZ
-    return [{'w': s, 's': round(v2t(cum[i]), 3), 'e': round(v2t(cum[i + 1]), 3)} for i, s in enumerate(words)]
+    def v2t(v): return min(int(np.searchsorted(vt, v)), len(vt) - 1)
+    edges = [v2t(c) for c in cum]; sm = np.convolve(env, np.ones(5) / 5, mode='same')
+    for i in range(1, len(edges) - 1):
+        a, z = max(edges[i] - 9, edges[i - 1] + 3), min(edges[i] + 9, len(sm) - 1)
+        if z > a: edges[i] = a + int(np.argmin(sm[a:z]))
+    return [{'w': s, 's': round(edges[i] / HZ, 3), 'e': round(edges[i + 1] / HZ, 3)} for i, s in enumerate(words)]
 
 
 def est_clip(text):
