@@ -1,31 +1,780 @@
 [
-{"n":3,"hud":[181,190],"pill":"URINISH 847","hot":"ichkarida|846|qirq|qizil|nafas|karavot|lift","choice":{"q":"QAYERGA?","a":"A: KARAVOT TAGIGA QARAYMAN","b":"B: LIFTGA YUGURAMAN"},"caption":"Telefondagi ovoz sen bilan bir xil. Faqat u juda charchagan.\n\nKaravot tagiga qaraysanmi yoki liftga yugurasanmi? Izohda yoz: A yoki B 👇","scenes":[
-{"t":"hook","big":["U ICHKARIDA"],"size":150,"bg":"bed","cols":["#FF4A3D"],"vo":"[whispers] Telefondagi ovoz faqat ikki so'z aytdi: u ichkarida."},
-{"t":"phone","name":"SEN","sub":"Suhbat davom etmoqda","tag":"A: JAVOB BERGANLAR","vo":"[tense] Javob berganlar: bu sening ovozing edi, faqat juda charchagan."},
-{"t":"big","lines":["MEN","846-CHIMAN"],"vo":"U aytdi: men sakkiz yuz qirq oltinchiman. Karavot tagiga qarama."},
-{"t":"stamp","word":"OCHMA","tag":"B: SAHIFANI OCHGANLAR","vo":"Sahifani ochganlar: unda yozuv emas, chizma bor edi."},
-{"t":"plan","label":"KARAVOT TAGI","vo":"[nervous] Bu sening xonang. Karavot tagida esa qizil nuqta."},
-{"t":"bed","vo":"[slowly] Ikkala yo'l ham seni bitta joyga qaratdi: karavot."},
-{"t":"bed","eyes":1,"boom":1,"vo":"Tagidan sekin... nafas eshitildi."},
-{"t":"opendoor","vo":"Shu payt eshik o'zi ochildi. Koridor oxirida lift yonib turibdi."},
-{"t":"split","l":{"t":"bed"},"r":{"t":"opendoor"},"ll":"KARAVOT","rl":"LIFT","vo":"[slowly] Karavot tagiga qaraysanmi... yoki liftga yugurasanmi?"}]},
-{"n":4,"hud":[190,197],"pill":"URINISH 847","hot":"sen|to‘qqizinchi|yo‘q|minma|zinapoya|jim","choice":{"q":"QAYSI BIRI?","a":"A: JIM ESHIKKA KIRAMAN","b":"B: ZINAPOYADAN TUSHAMAN"},"caption":"Liftda 9-qavat tugmasi yo'q. Sen esa hozir o'sha qavatdasan.\n\nHamma eshik 914. Kirasanmi yoki zinapoyadan tushasanmi? Izohda yoz: A yoki B 👇","scenes":[
-{"t":"hook","big":["KARAVOT TAGIDA","SEN YOTIBSAN"],"size":104,"bg":"bed","cols":["#FFFFFF","#FF4A3D"],"vo":"[whispers] Karavot tagida... sen yotibsan."},
-{"t":"bed","eyes":1,"tag":"A: QARAGANLAR","vo":"[tense] Qaraganlar: ko'zlari ochiq. Lablari qimirlaydi. Liftga minma, dedi u."},
-{"t":"lift","tag":"B: YUGURGANLAR","vo":"Yugurganlar: liftda sakkizta tugma bor edi."},
-{"t":"lift","label":"9-QAVAT YO‘Q","boom":1,"vo":"[nervous] To'qqizinchi qavat yo'q. Sen esa hozir... o'sha qavatdasan."},
-{"t":"big","lines":["BU QAVAT","CHIZMADA YO‘Q"],"vo":"Ikkala yo'l ham koridorga qaytardi. Lekin koridor boshqacha edi."},
-{"t":"corridor","num":"914","vo":"[slowly] Har bir eshik raqami bir xil. To'qqiz yuz o'n to'rt."},
-{"t":"door","feet":0,"vo":"Hamma eshik ortidan bir vaqtda taqillash boshlandi."},
-{"t":"stairs","vo":"Faqat bitta eshik jim. Yonida esa qorong'i zinapoya."},
-{"t":"split","l":{"t":"door","feet":0},"r":{"t":"stairs"},"ll":"JIM ESHIK","rl":"ZINAPOYA","vo":"[slowly] Jim eshikka kirasanmi... yoki zinapoyadan tushasanmi?"}]},
-{"n":5,"hud":[197,204],"pill":"URINISH 847","hot":"yuzing|sakkiz|qolsa|chiqadi|o‘zing","choice":{"q":"KIM CHIQADI?","a":"A: NUSXANI QOLDIRAMAN","b":"B: O‘ZIM QOLAMAN"},"caption":"Soya ham, ovoz ham begona emas edi. Birinchi sir yechildi, ammo undan kattarog'i ochildi.\n\nKim chiqadi? Izohda yoz: A yoki B 👇","scenes":[
-{"t":"hook","big":["SOYANING","YUZI SENIKI"],"size":118,"bg":"palm","cols":["#FFFFFF","#FF4A3D"],"vo":"[whispers] Soya yuzini ko'rsatdi. Bu... sening yuzing."},
-{"t":"room","shadow":1,"tag":"A: KIRGANLAR","vo":"[tense] Kirganlar: xonada ikkita sen bor edi. Biri derazada, biri stolda."},
-{"t":"stairs","tag":"B: TUSHGANLAR","vo":"Tushganlar: zinapoya pastga tushib, yana shu qavatga olib keldi."},
-{"t":"photo","shadow":1,"vo":"Devorda suratlar. Har birida sen. Har birida boshqa tun."},
-{"t":"big","lines":["OVOZ: 846","SOYA: 845"],"boom":1,"vo":"[nervous] Koridordagi ovoz sakkiz yuz qirq oltinchi. Soya sakkiz yuz qirq beshinchi. Ikkalasi ham sen edi."},
-{"t":"paper","title":"2-QOIDA","rows":[["","Xonada ikki kishi",0],["","bo‘lishi shart:",0],["","BIRI QOLSA,",1],["","IKKINCHISI CHIQADI",1]],"vo":"[slowly] Mana ikkinchi qoidaning ma'nosi. Biri qolsa, ikkinchisi chiqadi."},
-{"t":"mirror","eyes":1,"vo":"Nusxang senga qaradi. U ham sendek chiqishni xohlardi."},
-{"t":"split","l":{"t":"opendoor"},"r":{"t":"mirror","eyes":1},"ll":"CHIQISH","rl":"QOLISH","vo":"[slowly] Uni qoldirasanmi... yoki o'zing qolasanmi?"}]}
+{
+"n": 3,
+"hud": [
+181,
+190
+],
+"pill": "URINISH 847",
+"hot": "ichkarida|846|qirq|qizil|nafas|karavot|lift",
+"choice": {
+"q": "QAYERGA?",
+"a": "A: KARAVOT TAGIGA QARAYMAN",
+"b": "B: LIFTGA YUGURAMAN"
+},
+"caption": "Telefondagi ovoz sen bilan bir xil. Faqat u juda charchagan.\n\nKaravot tagiga qaraysanmi yoki liftga yugurasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"U ICHKARIDA"
+],
+"size": 150,
+"bg": "bed",
+"cols": [
+"#FF4A3D"
+],
+"vo": "[whispers] Telefondagi ovoz faqat ikki so'z aytdi: u ichkarida."
+},
+{
+"t": "phone",
+"name": "SEN",
+"sub": "Suhbat davom etmoqda",
+"tag": "A: JAVOB BERGANLAR",
+"vo": "[tense] Javob berganlar: bu sening ovozing edi, faqat juda charchagan."
+},
+{
+"t": "big",
+"lines": [
+"MEN",
+"846-CHIMAN"
+],
+"vo": "U aytdi: men sakkiz yuz qirq oltinchiman. Karavot tagiga qarama."
+},
+{
+"t": "stamp",
+"word": "OCHMA",
+"tag": "B: SAHIFANI OCHGANLAR",
+"vo": "Sahifani ochganlar: unda yozuv emas, chizma bor edi."
+},
+{
+"t": "plan",
+"label": "KARAVOT TAGI",
+"vo": "[nervous] Bu sening xonang. Karavot tagida esa qizil nuqta."
+},
+{
+"t": "bed",
+"vo": "[slowly] Ikkala yo'l ham seni bitta joyga qaratdi: karavot."
+},
+{
+"t": "bed",
+"eyes": 1,
+"boom": 1,
+"vo": "Tagidan sekin... nafas eshitildi."
+},
+{
+"t": "opendoor",
+"vo": "Shu payt eshik o'zi ochildi. Koridor oxirida lift yonib turibdi."
+},
+{
+"t": "split",
+"l": {
+"t": "bed"
+},
+"r": {
+"t": "opendoor"
+},
+"ll": "KARAVOT",
+"rl": "LIFT",
+"vo": "[slowly] Karavot tagiga qaraysanmi... yoki liftga yugurasanmi?"
+}
+]
+},
+{
+"n": 4,
+"hud": [
+190,
+197
+],
+"pill": "URINISH 847",
+"hot": "sen|to‘qqizinchi|yo‘q|minma|zinapoya|jim",
+"choice": {
+"q": "QAYSI BIRI?",
+"a": "A: JIM ESHIKKA KIRAMAN",
+"b": "B: ZINAPOYADAN TUSHAMAN"
+},
+"caption": "Liftda 9-qavat tugmasi yo'q. Sen esa hozir o'sha qavatdasan.\n\nHamma eshik 914. Kirasanmi yoki zinapoyadan tushasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"KARAVOT TAGIDA",
+"SEN YOTIBSAN"
+],
+"size": 104,
+"bg": "bed",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Karavot tagida... sen yotibsan."
+},
+{
+"t": "bed",
+"eyes": 1,
+"tag": "A: QARAGANLAR",
+"vo": "[tense] Qaraganlar: ko'zlari ochiq. Lablari qimirlaydi. Liftga minma, dedi u."
+},
+{
+"t": "lift",
+"tag": "B: YUGURGANLAR",
+"vo": "Yugurganlar: liftda sakkizta tugma bor edi."
+},
+{
+"t": "lift",
+"label": "9-QAVAT YO‘Q",
+"boom": 1,
+"vo": "[nervous] To'qqizinchi qavat yo'q. Sen esa hozir... o'sha qavatdasan."
+},
+{
+"t": "big",
+"lines": [
+"BU QAVAT",
+"CHIZMADA YO‘Q"
+],
+"vo": "Ikkala yo'l ham koridorga qaytardi. Lekin koridor boshqacha edi."
+},
+{
+"t": "corridor",
+"num": "914",
+"vo": "[slowly] Har bir eshik raqami bir xil. To'qqiz yuz o'n to'rt."
+},
+{
+"t": "door",
+"feet": 0,
+"vo": "Hamma eshik ortidan bir vaqtda taqillash boshlandi."
+},
+{
+"t": "stairs",
+"vo": "Faqat bitta eshik jim. Yonida esa qorong'i zinapoya."
+},
+{
+"t": "split",
+"l": {
+"t": "door",
+"feet": 0
+},
+"r": {
+"t": "stairs"
+},
+"ll": "JIM ESHIK",
+"rl": "ZINAPOYA",
+"vo": "[slowly] Jim eshikka kirasanmi... yoki zinapoyadan tushasanmi?"
+}
+]
+},
+{
+"n": 5,
+"hud": [
+197,
+204
+],
+"pill": "URINISH 847",
+"hot": "yuzing|sakkiz|qolsa|chiqadi|o‘zing",
+"choice": {
+"q": "KIM CHIQADI?",
+"a": "A: NUSXANI QOLDIRAMAN",
+"b": "B: O‘ZIM QOLAMAN"
+},
+"caption": "Soya ham, ovoz ham begona emas edi. Birinchi sir yechildi, ammo undan kattarog'i ochildi.\n\nKim chiqadi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"SOYANING",
+"YUZI SENIKI"
+],
+"size": 118,
+"bg": "palm",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Soya yuzini ko'rsatdi. Bu... sening yuzing."
+},
+{
+"t": "room",
+"shadow": 1,
+"tag": "A: KIRGANLAR",
+"vo": "[tense] Kirganlar: xonada ikkita sen bor edi. Biri derazada, biri stolda."
+},
+{
+"t": "stairs",
+"tag": "B: TUSHGANLAR",
+"vo": "Tushganlar: zinapoya pastga tushib, yana shu qavatga olib keldi."
+},
+{
+"t": "photo",
+"shadow": 1,
+"vo": "Devorda suratlar. Har birida sen. Har birida boshqa tun."
+},
+{
+"t": "big",
+"lines": [
+"OVOZ: 846",
+"SOYA: 845"
+],
+"boom": 1,
+"vo": "[nervous] Koridordagi ovoz sakkiz yuz qirq oltinchi. Soya sakkiz yuz qirq beshinchi. Ikkalasi ham sen edi."
+},
+{
+"t": "paper",
+"title": "2-QOIDA",
+"rows": [
+[
+"",
+"Xonada ikki kishi",
+0
+],
+[
+"",
+"bo‘lishi shart:",
+0
+],
+[
+"",
+"BIRI QOLSA,",
+1
+],
+[
+"",
+"IKKINCHISI CHIQADI",
+1
+]
+],
+"vo": "[slowly] Mana ikkinchi qoidaning ma'nosi. Biri qolsa, ikkinchisi chiqadi."
+},
+{
+"t": "mirror",
+"eyes": 1,
+"vo": "Nusxang senga qaradi. U ham sendek chiqishni xohlardi."
+},
+{
+"t": "split",
+"l": {
+"t": "opendoor"
+},
+"r": {
+"t": "mirror",
+"eyes": 1
+},
+"ll": "CHIQISH",
+"rl": "QOLISH",
+"vo": "[slowly] Uni qoldirasanmi... yoki o'zing qolasanmi?"
+}
+]
+},
+{
+"n": 6,
+"hud": [
+165,
+172
+],
+"pill": "1-QAVAT",
+"hot": "yo‘q|kulardi|ko‘zi|sakkiz|o‘chirasanmi|ko‘chaga|yetmish|ismingni",
+"choice": {
+"q": "QAYSI BIRI?",
+"a": "A: ISMIMNI O‘CHIRAMAN",
+"b": "B: KO‘CHAGA CHIQAMAN"
+},
+"caption": "Chiqib ketding deb o'ylading. Soat yana 02:45, daftarda esa sening isming.\n\nIsmingni o'chirasanmi yoki ko'chaga chiqasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"BU BINO",
+"XARITADA YO‘Q"
+],
+"size": 120,
+"bg": "stairs",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Chiqding. Lekin bu bino... hech qaysi xaritada yo'q."
+},
+{
+"t": "opendoor",
+"tag": "A: NUSXANI QOLDIRGANLAR",
+"vo": "[tense] Nusxani qoldirganlar: eshik yopildi. Ortingdan o'z ovozing eshitildi. U kulardi."
+},
+{
+"t": "mirror",
+"eyes": 1,
+"tag": "B: O‘ZI QOLGANLAR",
+"vo": "O'zi qolganlar: nusxang chiqib ketdi. Sen esa oynada qolding, va dunyoni uning ko'zi bilan ko'rding."
+},
+{
+"t": "clock",
+"a": "03:23",
+"b": "02:45",
+"boom": 1,
+"vo": "[slowly] Ikkala yo'l ham qabulxonada tugadi. Soat yana ikki-yu qirq besh."
+},
+{
+"t": "paper",
+"title": "QAYD DAFTARI",
+"rows": [
+[
+"XONA",
+"914",
+0
+],
+[
+"YASHOVCHI",
+"SENING ISMING",
+0
+],
+[
+"KELGAN YILI",
+"1974",
+1
+]
+],
+"vo": "[nervous] Daftarda sening isming bor. Kelgan yili: bir ming to'qqiz yuz yetmish to'rt."
+},
+{
+"t": "plan",
+"title": "BINO CHIZMASI",
+"x": 540,
+"y": 450,
+"label": "9-QAVAT QO‘LDA CHIZILGAN",
+"vo": "Devordagi chizmada bino sakkiz qavatli. To'qqizinchi qavat esa qo'lda chizilgan."
+},
+{
+"t": "door",
+"feet": 0,
+"vo": "Ko'cha eshigi ochiq turibdi. Stol ustida esa bitta o'chirg'ich."
+},
+{
+"t": "split",
+"l": {
+"t": "paper",
+"title": "DAFTAR",
+"rows": [
+[
+"",
+"ISMING",
+1
+]
+]
+},
+"r": {
+"t": "door",
+"feet": 0
+},
+"ll": "O‘CHIRISH",
+"rl": "KO‘CHA",
+"vo": "[slowly] Ismingni o'chirasanmi... yoki ko'chaga chiqasanmi?"
+}
+]
+},
+{
+"n": 7,
+"hud": [
+172,
+178
+],
+"pill": "1-QAVAT",
+"hot": "tanimaydi|yo‘qolding|qabulxona|minus|navbatchi|bosasanmi|o‘girasanmi",
+"choice": {
+"q": "QAYSI BIRI?",
+"a": "A: MINUS BIRNI BOSAMAN",
+"b": "B: NAVBATCHINI O‘GIRAMAN"
+},
+"caption": "Ismingni o'chirsang ham, qochsang ham bino seni qo'yib yubormaydi. Liftda yangi tugma paydo bo'ldi.\n\nBosasanmi yoki navbatchini o'girasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"ENDI SENI",
+"HECH KIM TANIMAYDI"
+],
+"size": 100,
+"bg": "crowd",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Endi seni... hech kim tanimaydi."
+},
+{
+"t": "phone",
+"name": "Noma’lum",
+"sub": "Kontakt topilmadi",
+"tag": "A: ISMINI O‘CHIRGANLAR",
+"vo": "[tense] Ismini o'chirganlar: telefoningdagi hamma suratdan yo'qolding."
+},
+{
+"t": "opendoor",
+"tag": "B: KO‘CHAGA CHIQQANLAR",
+"vo": "Ko'chaga chiqqanlar: tuman ichida yigirma qadam yurding."
+},
+{
+"t": "corridor",
+"num": "1",
+"boom": 1,
+"vo": "[nervous] Yigirma birinchi qadamda... yana shu qabulxonaga kirding."
+},
+{
+"t": "lift",
+"floors": [
+"8",
+"7",
+"6",
+"5",
+"4",
+"3",
+"2",
+"1",
+"-1"
+],
+"label": "YANGI TUGMA: -1",
+"vo": "[slowly] Ikkala yo'l ham liftga olib keldi. Unda yangi tugma bor: minus bir."
+},
+{
+"t": "room",
+"chair": 1,
+"vo": "Stolda navbatchi o'tiribdi. Orqasi senga qaragan. U hali bir marta ham qimirlamadi."
+},
+{
+"t": "split",
+"l": {
+"t": "lift",
+"floors": [
+"-1"
+]
+},
+"r": {
+"t": "room"
+},
+"ll": "MINUS BIR",
+"rl": "NAVBATCHI",
+"vo": "[slowly] Tugmani bosasanmi... yoki navbatchini o'girasanmi?"
+}
+]
+},
+{
+"n": 8,
+"hud": [
+178,
+184
+],
+"pill": "URINISH 847",
+"hot": "yuzi|yo‘q|qirq|001|birinchi|imzo|yirtasanmi|chekasanmi",
+"choice": {
+"q": "NIMA QILASAN?",
+"a": "A: IMZO CHEKAMAN",
+"b": "B: YIRTIB TASHLAYMAN"
+},
+"caption": "Navbatchi hamma 846 urinishni ko'rgan. Endi u senga bitta hujjat uzatdi.\n\nImzo chekasanmi yoki yirtib tashlaysanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"NAVBATCHINING",
+"YUZI YO‘Q"
+],
+"size": 112,
+"bg": "room",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Navbatchi o'girildi. Uning yuzi yo'q edi."
+},
+{
+"t": "lift",
+"floors": [
+"-1"
+],
+"tag": "A: TUGMANI BOSGANLAR",
+"vo": "[tense] Tugmani bosganlar: lift qirq yetti soniya pastga tushdi, keyin ochilmadi."
+},
+{
+"t": "paper",
+"title": "NISHON",
+"rows": [
+[
+"NAVBATCHI",
+"001",
+1
+],
+[
+"",
+"BIRINCHI URINISH",
+0
+]
+],
+"tag": "B: O‘GIRGANLAR",
+"vo": "O'girganlar: ko'ksidagi nishonda bitta raqam bor edi. Nol, nol, bir."
+},
+{
+"t": "big",
+"lines": [
+"U BIRINCHI",
+"SEN EDING"
+],
+"boom": 1,
+"vo": "[nervous] Birinchi urinish. Uni ham sen boshlagansan."
+},
+{
+"t": "monitor",
+"lines": [
+"URINISH 001 ... YO‘QOLGAN",
+"URINISH 412 ... YO‘QOLGAN",
+"URINISH 846 ... YO‘QOLGAN",
+"!URINISH 847 ... DAVOM ETMOQDA"
+],
+"vo": "[slowly] Ikkala yo'l ham uning ekraniga olib keldi. Hamma urinish yozilgan. Bittasidan boshqa hammasi yo'qolgan."
+},
+{
+"t": "paper",
+"title": "RUXSATNOMA",
+"rows": [
+[
+"",
+"Egasi chiqadi.",
+0
+],
+[
+"",
+"Nusxasi qoladi.",
+1
+],
+[
+"IMZO",
+"__________",
+0
+]
+],
+"vo": "U stolga ruxsatnoma qo'ydi. Egasi chiqadi, nusxasi qoladi."
+},
+{
+"t": "split",
+"l": {
+"t": "paper",
+"title": "IMZO",
+"rows": [
+[
+"",
+"_____",
+0
+]
+]
+},
+"r": {
+"t": "stamp",
+"word": "YIRT",
+"size": 110
+},
+"ll": "IMZO",
+"rl": "YIRTISH",
+"vo": "[slowly] Imzo chekasanmi... yoki yirtib tashlaysanmi?"
+}
+]
+},
+{
+"n": 9,
+"hud": [
+184,
+190
+],
+"pill": "URINISH 847",
+"hot": "oldindan|imzo|cho‘ntag|qirq|sensan|gaplashasanmi|yugurasanmi",
+"choice": {
+"q": "QAYSI BIRI?",
+"a": "A: ULAR BILAN GAPLASHAMAN",
+"b": "B: MINUS BIRGA YUGURAMAN"
+},
+"caption": "Imzo oldindan qo'yilgan edi. Koridorda esa bittasi emas, o'nlab sen turibsan.\n\nGaplashasanmi yoki yugurasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"IMZONG",
+"OLDINDAN",
+"QO‘YILGAN"
+],
+"size": 112,
+"bg": "paper",
+"title": "RUXSATNOMA",
+"rows": [],
+"cols": [
+"#FFFFFF",
+"#FF4A3D",
+"#FF4A3D"
+],
+"y": 640,
+"vo": "[whispers] Qog'ozga qarading. Imzong oldindan qo'yilgan edi."
+},
+{
+"t": "paper",
+"title": "IMZOLAR",
+"rows": [
+[
+"",
+"001 — sen",
+0
+],
+[
+"",
+"412 — sen",
+0
+],
+[
+"",
+"846 — sen",
+1
+]
+],
+"tag": "A: IMZO CHEKKANLAR",
+"vo": "[tense] Imzo chekkanlar: sahifa aylandi. Sakkiz yuz qirq olti marta shu imzo."
+},
+{
+"t": "stamp",
+"word": "YIRTILDI",
+"size": 90,
+"tag": "B: YIRTGANLAR",
+"vo": "Yirtganlar: parchalar polga tushdi. Hujjat esa cho'ntagingda butun edi."
+},
+{
+"t": "door",
+"feet": 1,
+"vo": "[nervous] Ikkala yo'lda ham bino uyg'ondi. Hamma eshik birdan ochildi."
+},
+{
+"t": "crowd",
+"boom": 1,
+"label": "O‘NLAB NUSXA",
+"vo": "Koridor odam bilan to'ldi. Har birining yuzi... sening yuzing."
+},
+{
+"t": "big",
+"lines": [
+"ULAR",
+"SENGA",
+"QARAYAPTI"
+],
+"vo": "[slowly] Ular jim turibdi. Hammasi faqat senga qarayapti."
+},
+{
+"t": "lift",
+"floors": [
+"-1"
+],
+"vo": "Ularning ortida lift ochiq. Minus bir tugmasi yonib turibdi."
+},
+{
+"t": "split",
+"l": {
+"t": "crowd"
+},
+"r": {
+"t": "lift",
+"floors": [
+"-1"
+]
+},
+"ll": "GAPLASHISH",
+"rl": "YUGURISH",
+"vo": "[slowly] Ular bilan gaplashasanmi... yoki yugurasanmi?"
+}
+]
+},
+{
+"n": 10,
+"hud": [
+190,
+196
+],
+"pill": "ARXIV",
+"hot": "oxirgisan|arxiv|papka|bo‘sh|kuzatuvchi|o‘qiysanmi|ochasanmi",
+"choice": {
+"q": "QAYSI PAPKA?",
+"a": "A: O‘Z PAPKAMNI O‘QIYMAN",
+"b": "B: 846-NI OCHAMAN"
+},
+"caption": "Bino aslida bino emas ekan. Ikkinchi sir yechildi, lekin endi hujjatni kim yozayotgani ma'lum bo'ldi.\n\nQaysi papkani ochasan? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"SEN",
+"OXIRGISAN"
+],
+"size": 150,
+"bg": "crowd",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Ular bir ovozda aytdi: sen oxirgisan."
+},
+{
+"t": "crowd",
+"tag": "A: GAPLASHGANLAR",
+"vo": "[tense] Gaplashganlar: sakkiz yuz qirq yettidan keyin urinish yo'q, deyishdi."
+},
+{
+"t": "lift",
+"floors": [
+"-1"
+],
+"tag": "B: YUGURGANLAR",
+"vo": "Yugurganlar: lift ichida soat to'xtadi, eshik pastda ochildi."
+},
+{
+"t": "shelves",
+"boom": 1,
+"label": "ARXIV",
+"vo": "[nervous] Ikkala yo'l ham minus birga olib keldi. Bu qavat emas. Bu arxiv."
+},
+{
+"t": "big",
+"lines": [
+"BINO YO‘Q.",
+"FAQAT",
+"PAPKALAR BOR."
+],
+"cols": [
+"#FF4A3D",
+"#FFFFFF",
+"#FFD54A"
+],
+"vo": "[slowly] Har bir xona bitta papka. Sen hech qachon binoda bo'lmagansan."
+},
+{
+"t": "folder",
+"name": "847",
+"vo": "Javonning oxirida sening papkang turibdi. U hali bo'sh."
+},
+{
+"t": "paper",
+"title": "YUBORUVCHI",
+"rows": [
+[
+"",
+"KUZATUVCHILAR",
+1
+]
+],
+"vo": "Muqovasida bir so'z bor. Yuboruvchi: Kuzatuvchilar."
+},
+{
+"t": "split",
+"l": {
+"t": "folder",
+"name": "847"
+},
+"r": {
+"t": "folder",
+"name": "846"
+},
+"ll": "SENIKI",
+"rl": "846-CHI",
+"vo": "[slowly] O'z papkangni o'qiysanmi... yoki sakkiz yuz qirq oltinchisini ochasanmi?"
+}
+]
+}
 ]
