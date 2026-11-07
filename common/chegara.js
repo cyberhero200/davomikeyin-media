@@ -1,7 +1,7 @@
 // Chegaradagi Hujjat S1E2 "847". Pure function of time.
 import { W, H, E, prog, lerp, clamp, bump, font, fill, rrect, hash01, noise1, TAU, D, UI, YEL, RED,
   B, at, sp, pf, keys, envAt, vignette, label, bigText, shakeCam, hud, clock, phone, titleCard, choiceCard, ctaCard, run } from './kit.js';
-const NAMES = ['room', 'corridor', 'door', 'bed', 'lift', 'stairs', 'archive', 'lobby', 'desk', 'window', 'guard', 'crowd', 'mirror', 'folder']; const IM = {};
+const NAMES = ['room', 'corridor', 'door', 'bed', 'lift', 'stairs', 'archive', 'lobby', 'desk', 'window', 'guard', 'crowd', 'mirror', 'folder', 'archivist', 'gate', 'screens']; const IM = {};
 await Promise.all(NAMES.map((n) => new Promise((res) => { const i = new Image(); i.onload = () => { IM[n] = i; res(); }; i.src = `bg/${n}.jpg`; })));
 
 const TEAL = '#0B1C22', BLUE = '#7FD6E8', LAMP = '#FFB65C';
@@ -182,6 +182,12 @@ Object.assign(V2, {
   lobby: (c, t, b, d) => plate(c, t, b, 'lobby', { over: (o) => { glow(o, 460, 1100, 320, '255,190,110', 0.22 * flick(t)); if (d.guard) seated(o, t, 170, 1020, 0.6); } }),
   plan: (c, t, b, d) => { desk(c, t, 0.7); c.save(); c.translate(W / 2, 800); c.rotate(0.015); c.translate(-W / 2, -800); c.beginPath(); c.rect(120, 250, 840, 1120); c.clip(); plan(c, t, b, d); c.restore(); },
   paper: (c, t, b, d) => { paper(c, t, b, d); [[220, 420, 70], [840, 1120, 110], [780, 480, 44]].forEach(([x, y, r]) => { const g = c.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, 'rgba(80,50,20,0.16)'); g.addColorStop(1, 'rgba(80,50,20,0)'); c.fillStyle = g; c.fillRect(x - r, y - r, r * 2, r * 2); }); },
+});
+
+Object.assign(V2, {
+  archivist: (c, t, b, d) => plate(c, t, b, 'archivist', { z0: 1.03, z1: d.close ? 1.6 : 1.2, fx: 520, fy: d.close ? 700 : 960, ad: 0, over: (o) => { const f = 0.75 + 0.25 * Math.sin(t * 9) * Math.sin(t * 3.3); glow(o, 270, 1180, 380, '255,170,80', 0.42 * f); glow(o, 470, 640, 60, '200,235,240', d.eyes ? 0.5 : 0.12); } }),
+  gate: (c, t, b, d) => plate(c, t, b, 'gate', { z0: 1.03, z1: 1.25, fy: 900, ad: 0, over: (o) => { const p = 0.35 + 0.25 * Math.sin(t * 2.2); glow(o, 540, 1000, 560, '220,240,255', p * 0.4); o.fillStyle = '#9EA3A0'; o.fillRect(410, 300, 260, 70); o.fillStyle = '#16110C'; o.textAlign = 'center'; o.font = font(46, 900, D); o.fillText('CHEGARA', 540, 352); o.textAlign = 'left'; } }),
+  screens: (c, t, b, d) => plate(c, t, b, 'screens', { z0: 1.03, z1: 1.2, fy: 820, ad: 0, over: (o) => { for (let i = 0; i < 40; i++) { const x = 130 + (i % 8) * 108, y = 230 + Math.floor(i / 8) * 102; o.fillStyle = `rgba(160,220,240,${0.06 + 0.14 * hash01(i, Math.floor(t * 8))})`; o.fillRect(x, y, 92, 70); } if (d.ab) ['A', 'B', 'A', 'A', 'B', 'A', 'B', 'B'].forEach((s, i) => { const x = 190 + (i % 4) * 230, y = 330 + Math.floor(i / 4) * 210; o.globalAlpha = clamp((pf(t, b) - i * 0.07) / 0.1); o.fillStyle = s === 'A' ? RED : '#3DDC84'; o.font = font(90, 900, D); o.textAlign = 'center'; o.fillText(s, x, y); o.globalAlpha = 1; o.textAlign = 'left'; }); glow(o, 1000, 1120, 180, '255,180,90', 0.3 * flick(t)); } }),
 });
 Object.assign(SETS, V2);
 export function episode(ep) {

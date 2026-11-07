@@ -783,5 +783,405 @@
 "vo": "[slowly] O'z papkangni o'qiysanmi... yoki sakkiz yuz qirq oltinchisini ochasanmi?"
 }
 ]
+},
+{
+"n": 11,
+"hud": [
+196,
+200
+],
+"pill": "ARXIV",
+"hot": "ertangi|ozod|arxivchi|yashirinasanmi|chaqirasanmi",
+"choice": {
+"q": "QAYSI BIRI?",
+"a": "A: JAVONLARGA YASHIRINAMAN",
+"b": "B: ARXIVCHINI CHAQIRAMAN"
+},
+"caption": "O'z papkangda ertangi kuning yozilgan. 846-chisida esa sening isming.\n\nYashirinasanmi yoki Arxivchini chaqirasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"PAPKANGDA",
+"ERTANGI KUNING"
+],
+"size": 112,
+"bg": "folder",
+"name": "847",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Papkangda... ertangi kuning yozilgan edi."
+},
+{
+"t": "paper",
+"title": "847",
+"rows": [
+[
+"ERTAGA",
+"03:00",
+0
+],
+[
+"",
+"U QAROR QILADI",
+1
+]
+],
+"tag": "A: O‘ZINIKINI O‘QIGANLAR",
+"vo": "[tense] O'qiganlar: oxirgi qatorda bitta jumla. Ertaga soat uchda, u qaror qiladi."
+},
+{
+"t": "paper",
+"title": "846",
+"rows": [
+[
+"OXIRGI YOZUV",
+"847 MENI",
+0
+],
+[
+"",
+"OZOD QILADI",
+1
+]
+],
+"tag": "B: 846-NI OCHGANLAR",
+"vo": "Ochganlar: sakkiz yuz qirq oltinchining oxirgi yozuvi. Sakkiz yuz qirq yetti meni ozod qiladi."
+},
+{
+"t": "shelves",
+"boom": 1,
+"vo": "[nervous] Ikkala yo'lda ham arxiv qorong'isida fonar yondi."
+},
+{
+"t": "archivist",
+"vo": "[slowly] Unga Arxivchi deyishadi. U har qadamda bitta papkani yopadi."
+},
+{
+"t": "split",
+"l": {
+"t": "shelves"
+},
+"r": {
+"t": "archivist"
+},
+"ll": "YASHIRINISH",
+"rl": "CHAQIRISH",
+"vo": "[slowly] Javonlarga yashirinasanmi... yoki uni chaqirasanmi?"
+}
+]
+},
+{
+"n": 12,
+"hud": [
+200,
+204
+],
+"pill": "ARXIV",
+"hot": "soya|yozaman|tanlaydi|ekran|qalam|ro‘yxat",
+"choice": {
+"q": "NIMANI OLASAN?",
+"a": "A: QALAMINI OLAMAN",
+"b": "B: RO‘YXATNI O‘QIYMAN"
+},
+"caption": "Arxivchi hech kimni tanlamaydi. U faqat yozadi. Tanlovni boshqalar qiladi.\n\nQalamni olasanmi yoki ro'yxatni o'qiysanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"ARXIVCHINING",
+"SOYASI YO‘Q"
+],
+"size": 108,
+"bg": "archivist",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Fonar yonib turibdi. Lekin Arxivchining soyasi yo'q."
+},
+{
+"t": "shelves",
+"tag": "A: YASHIRINGANLAR",
+"vo": "[tense] Yashiringanlar: u to'xtadi va javonga qaramasdan aytdi. Men seni ko'rib turibman."
+},
+{
+"t": "archivist",
+"close": 1,
+"eyes": 1,
+"tag": "B: CHAQIRGANLAR",
+"vo": "Chaqirganlar: u yaqin keldi. Ko'zlari yo'q edi, faqat ikki uchqun."
+},
+{
+"t": "big",
+"lines": [
+"MEN YOZAMAN.",
+"ULAR",
+"TANLAYDI."
+],
+"cols": [
+"#FFFFFF",
+"#FFD54A",
+"#FF4A3D"
+],
+"plate": "archive",
+"boom": 1,
+"vo": "[nervous] U aytdi: men faqat yozaman. Ular tanlaydi."
+},
+{
+"t": "screens",
+"ab": 1,
+"vo": "[slowly] Stol ortida yuzlab ekran. Har birida ikki harf yonib-o'chadi."
+},
+{
+"t": "split",
+"l": {
+"t": "screens"
+},
+"r": {
+"t": "paper",
+"title": "RO‘YXAT",
+"rows": [
+[
+"",
+"KUZATUVCHILAR",
+1
+]
+]
+},
+"ll": "QALAM",
+"rl": "RO‘YXAT",
+"vo": "[slowly] Uning qalamini olasanmi... yoki ro'yxatni o'qiysanmi?"
+}
+]
+},
+{
+"n": 13,
+"hud": [
+204,
+208
+],
+"pill": "ARXIV",
+"hot": "eshik|sen|yorilib|nusxalar|yozasanmi|yopasanmi",
+"choice": {
+"q": "NIMA QILASAN?",
+"a": "A: O‘Z OXIRIMNI YOZAMAN",
+"b": "B: PAPKALARNI YOPAMAN"
+},
+"caption": "Qalam yozganini haqiqatga aylantiradi. Ro'yxatda esa bitta tanish so'z bor.\n\nO'z oxiringni yozasanmi yoki papkalarni yopasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"RO‘YXATDA",
+"SEN HAM BORSAN"
+],
+"size": 104,
+"bg": "screens",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"pill": "HA, SEN. EKRANGA QARAYOTGAN",
+"vo": "[whispers] Ro'yxatning oxirida bitta so'z bor edi. Sen."
+},
+{
+"t": "door",
+"feet": 0,
+"tag": "A: QALAMNI OLGANLAR",
+"vo": "[tense] Qalamni olganlar: qog'ozga eshik deb yozding. Devorda eshik paydo bo'ldi."
+},
+{
+"t": "screens",
+"ab": 1,
+"tag": "B: O‘QIGANLAR",
+"vo": "O'qiganlar: Kuzatuvchilar ismsiz edi. Faqat bitta qator: hozir ekranga qarayotgan kishi."
+},
+{
+"t": "shelves",
+"boom": 1,
+"vo": "[nervous] Shu payt hamma papka birdan ochildi."
+},
+{
+"t": "crowd",
+"label": "PAPKALARDAN CHIQDILAR",
+"vo": "[slowly] Har bir papkadan bitta sen chiqib keldi. Ular arxivni to'ldiryapti."
+},
+{
+"t": "split",
+"l": {
+"t": "paper",
+"title": "OXIRI",
+"rows": [
+[
+"",
+"______",
+0
+]
+]
+},
+"r": {
+"t": "folder",
+"name": "846"
+},
+"ll": "YOZISH",
+"rl": "YOPISH",
+"vo": "[slowly] O'z oxiringni yozasanmi... yoki papkalarni yopasanmi?"
+}
+]
+},
+{
+"n": 14,
+"hud": [
+208,
+212
+],
+"pill": "CHEGARA",
+"hot": "siyoh|chegara|qaytmagan|o‘tasanmi|yoqasanmi",
+"choice": {
+"q": "OXIRGI ESHIK?",
+"a": "A: CHEGARADAN O‘TAMAN",
+"b": "B: PAPKAMNI YOQAMAN"
+},
+"caption": "Arxivning oxirida temir eshik bor. Undan o'tgan hech kim qaytmagan.\n\nChegaradan o'tasanmi yoki papkangni yoqasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"SIYOH",
+"TUGADI"
+],
+"size": 150,
+"bg": "paper",
+"title": "OXIRI",
+"rows": [],
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Siyoh tugadi. Oxiringni yozib ulgurmading."
+},
+{
+"t": "paper",
+"title": "OXIRI",
+"rows": [
+[
+"",
+"Men chiqaman va",
+0
+],
+[
+"",
+"",
+0
+]
+],
+"tag": "A: YOZGANLAR",
+"vo": "[tense] Yozganlar: men chiqaman, deb yozding. Keyingi so'z yozilmadi."
+},
+{
+"t": "crowd",
+"tag": "B: YOPGANLAR",
+"vo": "Yopganlar: har bir papka yopilganda bitta nusxa jim yo'qoldi."
+},
+{
+"t": "gate",
+"boom": 1,
+"vo": "[nervous] Ikkala yo'l ham arxiv oxiriga olib keldi. Temir eshik. Ustida: Chegara."
+},
+{
+"t": "archivist",
+"vo": "[slowly] Arxivchi orqangda turardi. Undan o'tgan hech kim qaytmagan, dedi."
+},
+{
+"t": "split",
+"l": {
+"t": "gate"
+},
+"r": {
+"t": "folder",
+"name": "847"
+},
+"ll": "O‘TISH",
+"rl": "YOQISH",
+"vo": "[slowly] Chegaradan o'tasanmi... yoki papkangni yoqasanmi?"
+}
+]
+},
+{
+"n": 15,
+"hud": [
+212,
+216
+],
+"pill": "CHEGARA",
+"hot": "sen|tanlamagansan|ular|kuzatuvchilar|qarshi|bo‘ysunasanmi",
+"choice": {
+"q": "ULARGA NIMA DEYSAN?",
+"a": "A: QARSHI CHIQAMAN",
+"b": "B: BO‘YSUNAMAN"
+},
+"caption": "Uchinchi sir yechildi: 847 urinishning hech birida sen tanlamagansan.\n\nKuzatuvchilarga qarshi chiqasanmi yoki bo'ysunasanmi? Izohda yoz: A yoki B 👇",
+"scenes": [
+{
+"t": "hook",
+"big": [
+"SEN HECH QACHON",
+"TANLAMAGANSAN"
+],
+"size": 96,
+"bg": "gate",
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"vo": "[whispers] Sen hech qachon... tanlamagansan."
+},
+{
+"t": "gate",
+"tag": "A: O‘TGANLAR",
+"vo": "[tense] O'tganlar: eshik ortida oq bo'shliq. Bo'shliqda ekranlar. Ekranlarda yuzlar."
+},
+{
+"t": "folder",
+"name": "847",
+"tag": "B: YOQQANLAR",
+"vo": "Yoqqanlar: papka yonmadi. Uning ichida yangi sahifa paydo bo'ldi."
+},
+{
+"t": "screens",
+"ab": 1,
+"boom": 1,
+"vo": "[nervous] Ikkala yo'lda ham haqiqat ochildi. Har bir eshikni, har bir derazani Kuzatuvchilar tanlagan."
+},
+{
+"t": "big",
+"lines": [
+"KUZATUVCHILAR",
+"SENSAN"
+],
+"cols": [
+"#FFFFFF",
+"#FF4A3D"
+],
+"plate": "screens",
+"red": 1,
+"vo": "[slowly] Ular hozir senga qarab turibdi. Ha, sen. Ekran ortidagi."
+},
+{
+"t": "split",
+"l": {
+"t": "gate"
+},
+"r": {
+"t": "screens"
+},
+"ll": "QARSHILIK",
+"rl": "BO‘YSUNISH",
+"vo": "[slowly] Ularga qarshi chiqasanmi... yoki bo'ysunasanmi?"
+}
+]
 }
 ]
